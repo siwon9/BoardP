@@ -1,36 +1,39 @@
 package org.siwon.global.validators;
 
-public interface PasswordValidator { // 복잡성을 가감하기 위한 인터페이스
+public interface PasswordValidator {
     /**
      * 알파벳 복잡성 체크
+     *
      * @param password
-     * @param caseIncensitive - false : 대소문자 각각 1개씩 이상 포함, true - 대소문자 구분 X
+     * @param caseInsensitive - false : 대소문자 각각 1개씩 이상 포함, true - 대소문자 구분 X
      * @return
      */
-    default boolean alphaCheck(String password, boolean caseIncensitive) {
+    default boolean alphaCheck(String password, boolean caseInsensitive) {
+        if (caseInsensitive) { // 대소문자 구분없이 알파벳 체크
+            return password.matches(".*[a-zA-Z]+.*");
+        }
 
-        return false;
+        return password.matches(".*[a-z]+.*") && password.matches(".*[A-Z]+.*");
     }
 
     /**
      * 숫자 복잡성 체크
+     *
      * @param password
      * @return
      */
     default boolean numberCheck(String password) {
-
-        return false;
+        return password.matches(".*\\d+.*");
     }
-
 
     /**
      * 특수문자 복잡성 체크
+     *
      * @param password
      * @return
      */
     default boolean specialCharsCheck(String password) {
-
-        return false;
+        String pattern = ".*[^0-9a-zA-Zㄱ-ㅎ가-힣]+.*";
+        return password.matches(pattern);
     }
 }
-

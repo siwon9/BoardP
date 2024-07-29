@@ -1,4 +1,4 @@
-package org.siwon.members.controllers;
+package org.siwon.member.controllers;
 
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Email;
