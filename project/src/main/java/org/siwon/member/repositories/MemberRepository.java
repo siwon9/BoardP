@@ -1,6 +1,7 @@
 package org.siwon.member.repositories;
 
 import org.siwon.member.entities.Member;
+import org.siwon.member.entities.QMember;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
