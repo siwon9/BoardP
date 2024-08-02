@@ -4,8 +4,8 @@ server:
 spring:
   # 데이터베이스 설정
   datasource:
-    driverClassName: '{cipher}08ead53a1b851377d89988bcd1e13939da47e557f97442ddd7a8201fb0059d1ca0fdbc3313782b3a611a9146809d8dbf%'
-    url: jdbc:oracle:thin:@${db.host}:${db.port}:EE
+    driverClassName: '{cipher}920de040b98d5170c36316dd674bb9822a4804f8153550d020220aaa0ede5f7bc05f86ed6b4d4ffdaa0eb4a554fd71ec'
+    url: '{cipher}91b9f5893f8e4217d9c6eed0f60c37376fe26f3097532b31801b834f04fbaa16a6144369e8f6cf0ab31751c2dd910d9e735b281341e48a7998ba5dbdcae6b1be'
     username: ${db.username}
     password: ${db.password}
 
@@ -26,8 +26,31 @@ spring:
       maxRequestSize: 60MB
       fileSizeThreshold: 30MB
 
+
 # 로거 설정
 logging:
   level:
     org.hibernate.type: trace
     org.hibernate.orm.jdbc.bind: trace
+
+# 유레카 설정
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${eurekaHost}/eureka/
+
+# 액추에이터 설정
+management:
+  endpoint:
+    health:
+      showDetails: always
+    refresh:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health, refresh

@@ -3,6 +3,3 @@ file:
   upload:
     path: ${fileUpload.path}
     url: /upload/
-
-
-

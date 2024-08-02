@@ -1,6 +1,7 @@
 spring:
   application:
     name: api-service
+
   cloud:
     config:
-      uri: http://localhost:3100
+      uri: ${configServerUrl}
