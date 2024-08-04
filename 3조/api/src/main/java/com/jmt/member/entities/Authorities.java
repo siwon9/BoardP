@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Builder
 @IdClass(AuthoritiesId.class)
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Authorities {
     @Id
     @ManyToOne(fetch= FetchType.LAZY)

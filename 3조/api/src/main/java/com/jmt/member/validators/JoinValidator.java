@@ -1,6 +1,5 @@
 package com.jmt.member.validators;
 
-
 import com.jmt.global.validators.MobileValidator;
 import com.jmt.global.validators.PasswordValidator;
 import com.jmt.member.controllers.RequestJoin;

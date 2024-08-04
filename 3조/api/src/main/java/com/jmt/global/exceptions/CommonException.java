@@ -7,7 +7,8 @@ import org.springframework.http.HttpStatus;
 import java.util.List;
 import java.util.Map;
 
-@Getter @Setter
+@Getter
+@Setter
 public class CommonException extends RuntimeException {
     private boolean errorCode;
     private HttpStatus status;

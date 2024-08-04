@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import java.util.List;
 import java.util.Map;
 
-public class BadRequestException extends CommonException{
+public class BadRequestException extends CommonException {
 
     public BadRequestException(String message) {
         super(message, HttpStatus.BAD_REQUEST);
@@ -16,4 +16,3 @@ public class BadRequestException extends CommonException{
         setErrorMessages(errorMessages);
     }
 }
-

@@ -22,4 +22,5 @@ public abstract class BaseMemberEntity extends BaseEntity {
     @LastModifiedBy
     @Column(length=65, insertable = false)
     private String modifiedBy;
+
 }
