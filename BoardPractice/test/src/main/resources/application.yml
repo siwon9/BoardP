@@ -8,7 +8,7 @@ spring:
   datasource:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     # 카멜케이스 형식으로도 입력 가능 driverClassName
-    url: jdbc:oracle:thin:@${db.host}:${db.port}:XE
+    url: jdbc:oracle:thin:@${db.host}:${db.port}:EE
     username: ${db.username}
     password: ${db.password}
 

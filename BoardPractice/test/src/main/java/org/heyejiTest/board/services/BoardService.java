@@ -36,6 +36,7 @@ public class BoardService {
 
         if (boardData == null) boardData = new ModelMapper().map(form, BoardData.class); // 추가
         //BoardData boardData = new ModelMapper().map(form, BoardData.class);
+        // ModelMapper가 어디서 사용되는걸까?
 
         boardRepository.saveAndFlush(boardData);
     }
@@ -54,5 +55,4 @@ public class BoardService {
 
         return form;
     }
-
 }
